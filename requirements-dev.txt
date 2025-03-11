@@ -1,2 +1,9 @@
 chalice==1.31.3
 pytest
+boto3
+webauthn
+itsdangerous
+python-jose
+requests
+pydantic
+pydantic-settings
