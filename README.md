@@ -37,8 +37,7 @@ User → API Gateway (Lambda Proxy) → Cognito → Chalice Lambda Functions
 │    ├── auth.py               # Authentication handlers
 │    ├── auth_challenges.py    # Cognito custom challenge logic
 │    ├── helpers.py            # Utility functions
-│    ├── session.py            # Cookie-based session management
-│    └── security.py           # CSRF protection and validators
+│    └── settings.py           # Pydantic settings for environment variables and secrets
 └── terraform/
      ├── main.tf               # AWS resources (Cognito, Lambda, etc.)
      ├── variables.tf          # Input variables
@@ -62,13 +61,11 @@ User → API Gateway (Lambda Proxy) → Cognito → Chalice Lambda Functions
 
 ## ⚙️ Configuration & Environment Variables
 
-### **Pydantic Settings Management** (`chalicelib/settings.py`)
+The following environment variables and secrets are managed using **Pydantic Settings Management (`chalicelib/settings.py`)**:
 
-The following required environment variables are managed using **Pydantic’s `BaseSettings`**:
-
-- **Cognito User Pool & App Client Configuration**
-- **API Gateway & Frontend URLs**
-- **Security Settings (CSRF Protection, WebAuthn Relying Party Config)**
+- Cognito User Pool & App Client Configuration
+- API Gateway & Frontend URLs
+- Security Settings (CSRF Protection, WebAuthn Relying Party Config)
 
 ```python
 from pydantic_settings import BaseSettings
