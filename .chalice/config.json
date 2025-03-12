@@ -3,7 +3,14 @@
   "app_name": "expenser-auth",
   "stages": {
     "dev": {
-      "api_gateway_stage": "api"
+      "api_gateway_stage": "dev",
+      "manage_iam_role": false,
+      "lambda_timeout": 30,
+      "lambda_memory_size": 1024,
+      "automatic_layer": true,
+      "xray": true,
+      "environment_variables": {},
+      "iam_role_arn": ""
     }
   }
 }

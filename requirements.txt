@@ -1,0 +1,7 @@
+boto3
+webauthn
+itsdangerous
+python-jose
+requests
+pydantic
+pydantic-settings

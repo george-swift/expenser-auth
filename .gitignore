@@ -1,2 +1,7 @@
 .chalice/deployments/
+.chalice/deployed
 .chalice/venv/
+.env
+.terraform*
+terraform.*
+__pycache__
